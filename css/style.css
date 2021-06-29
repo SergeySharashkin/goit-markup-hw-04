@@ -30,13 +30,26 @@ p {
   margin: 0;
   padding: 0;
 }
+img {
+  display: block;
+}
 .list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
 .container {
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -45,14 +58,11 @@ p {
 }
 .section {
   padding-bottom: 94px;
+  padding-top: 94px;
+  margin: 0;
 }
-.head {
-  width: 1230px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin: 0 auto;
+.head .container{
+  border-bottom: 10px #ececec;
 }
 
 .accent {
@@ -139,17 +149,15 @@ p {
   color: var(--accent-color);
 }
 .hero-container {
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
   text-align: center;
 }
-.hero {
-  width: 1600px;
-  background-color: var(--hero-bgr-color);
 
-  text-align: center;
+.hero {
+  background-color: var(--hero-bgr-color);
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -192,6 +200,10 @@ p {
   background-color: var(--button-bgr-color);
   min-width: 83px;
   border: 1px solid transparent;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
 }
 .button-sec:focus,
 .button-sec:hover {
@@ -199,10 +211,7 @@ p {
   color: var(--hero-text-color);
 }
 .padding-section {
-  padding-top: 94px;
-}
-.features {
-  display: none;
+  padding-bottom: 0px;
 }
 .features-list {
   display: flex;
@@ -212,7 +221,7 @@ p {
   width: 270px;
   margin-right: 30px;
 }
-.features-form:nts-child(4n) {
+.features-form:last-child {
   margin-right: 0;
 }
 .features-item {
@@ -249,24 +258,21 @@ p {
   flex-wrap: wrap;
 
   padding: 0;
-  margin-right: 30px;
   margin-top: 0;
   margin-bottom: 0;
 }
 .occupation-form {
   display: flex;
   margin-right: 30px;
+  width: 370px;
 }
 .occupation-form:last-child {
   margin-right: 0px;
 }
-
-.foto {
-  display: block;
-  margin-top: 0;
-}
 .team {
   background-color: var(--button-bgr-color);
+  padding-bottom: 94px;
+  padding-top: 94px;
 }
 .team-tittle {
   font-weight: bold;
@@ -280,12 +286,11 @@ p {
   display: flex;
 
   padding: 0;
-}
-.team-list:last-child {
-  margin-right: 0px;
+  margin: 0;
 }
 .team-form {
   margin-right: 30px;
+  width: 270px;
 }
 .team-form:last-child {
   margin-right: 0px;
@@ -295,26 +300,26 @@ p {
   font-size: 16px;
   line-height: 1.19;
 }
-.team-foto {
-  margin-top: 30px;
-}
 .team-member {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
 
-  margin-top: 29.95px;
 }
 .team-occupation {
   margin-top: 9.98px;
+  color: var(--tittle-text-color);
 }
+.team-container {
+  padding-top: 29.95px;
+  padding-bottom: 29.95px;
+}
+/*Footer*/
 .foot {
   background-color: var(--hero-bgr-color);
-  width: 1600px;
-  padding-left: 215px;
-  padding-right: auto;
   padding-top: 60px;
   padding-bottom: 60px;
+  
 }
 .logo-foot {
   color: var(--hero-text-color);
@@ -323,19 +328,16 @@ p {
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
-  text-align: left;
   display: flex;
   margin-bottom: 20px;
 }
 
 .addr {
-  font-weight: normal;
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   color: var(--hero-text-color);
   text-align: left;
-  
 }
 .addr p {
   margin-bottom: 9px;
@@ -344,7 +346,6 @@ p {
 .addr .mail {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
-  font-weight: 400;
   letter-spacing: 0.02em;
   text-align: left;
 
@@ -354,7 +355,6 @@ p {
 .addr .tel {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
-  font-weight: 400;
   letter-spacing: 0.02em;
   text-align: left;
 }
@@ -368,13 +368,9 @@ p {
 }
 
 /*Portfolio style*/
-.portfolio-tittle,
-.choice-tittle,
-.work-tittel {
-  display: none;
-}
+
 .portfolio-choice {
-  text-align: center;
+  font-weight: 500;
   padding-bottom: 16px;
 }
 
@@ -382,9 +378,9 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 16px;
 }
 .choice-item {
+  display: flex;
   margin-right: 8px;
 }
 .choice-item:last-child {
@@ -393,6 +389,7 @@ p {
 .work-list {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 50px;
 }
 .work-list a {
   text-decoration: none;
@@ -404,16 +401,16 @@ p {
   line-height: 2;
   letter-spacing: 0.06em;
   margin-top: 20px;
-  padding-left: 24px;
 }
 .work-form {
   text-align: left;
   margin-right: 30px;
   margin-bottom: 30px;
+  width: 370px;
 }
 .work-form:nth-last-child(3n + 1) {
   text-align: left;
-  margin-right: 30px;
+  margin-right: 0;
 }
 .work-form:nth-last-child(-n + 3) {
   text-align: left;
@@ -425,5 +422,4 @@ p {
   line-height: 1.88;
   color: var(--tittle-text-color);
   margin-top: 4px;
-  padding-left: 24px;
 }
