@@ -160,6 +160,22 @@ img {
   background-color: var(--hero-bgr-color);
   padding-top: 200px;
   padding-bottom: 200px;
+  width: 1600px;
+}
+.overlay {
+  max-width: 1600px;
+  height: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--hero-bgr-color);
+  background-size: cover;
+    background-image: linear-gradient( 
+      to right, 
+      rgba(47, 48, 58, 0.6),
+      rgba(47, 48, 58, 0.6)
+    ),
+  url('../images/Img17.jpg');
+  background-position: center;
 }
 .hero-tittle {
   color: var(--hero-text-color);
