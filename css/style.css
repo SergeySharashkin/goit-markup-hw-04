@@ -18,7 +18,7 @@ html {
 
 body {
   color: var(--primary-text-color);
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
 }
 h1,
@@ -54,16 +54,14 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-
-  text-align: center;
 }
 .section {
   padding-bottom: 94px;
   padding-top: 94px;
   margin: 0;
 }
-.head .container{
-  border-bottom: 10px #ececec;
+.head {
+  border-bottom: 1px solid #ececec;
 }
 
 .accent {
@@ -122,6 +120,25 @@ img {
   display: flex;
   margin-left: auto;
 }
+.contacts-button {
+display: flex;
+flex-wrap: wrap;
+padding: auto;
+align-items: center;
+border: none;
+background-color: var(--hero-text-color);
+}
+.contacts-button:hover .icon-cont,
+.contacts-button:focus .icon-cont {
+  fill: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.icon-cont {
+  display: inline-block;
+  fill: var(--tittle-text-color);
+  margin-right: 10px;
+}
 .contacts .item + .item {
   margin-left: 50px;
 }
@@ -149,33 +166,30 @@ img {
 .contacts .tel:focus {
   color: var(--accent-color);
 }
-.hero-container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.hero {
+.hero-bgr {
   background-color: var(--hero-bgr-color);
+
+}
+.hero {
+  text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-  width: 1600px;
 }
+
 .overlay {
-  max-width: 1600px;
-  height: 480px;
+  width: 1600px;
+  height: 600px;
   margin-left: auto;
   margin-right: auto;
+
   background-color: var(--hero-bgr-color);
   background-size: cover;
-    background-image: linear-gradient( 
-      to right, 
+  background-image: linear-gradient(
+      to right,
       rgba(47, 48, 58, 0.6),
       rgba(47, 48, 58, 0.6)
     ),
-  url('../images/Img17.jpg');
+    url("../images/Img17.jpg");
   background-position: center;
 }
 .hero-tittle {
@@ -200,6 +214,7 @@ img {
 .button-prim {
   color: var(--hero-text-color);
   font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
@@ -234,33 +249,25 @@ img {
   display: flex;
   flex-wrap: wrap;
 }
-
+.button-features {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+.features-icon {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  fill: var(--primary-text-color);
+}
 .features-form {
   width: 270px;
   margin-right: 30px;
-}
-.features-form::before {
-  display: block;
-  content: '';
-  height: 120px;
-  background-color: var(--button-bgr-color);
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-bottom: 30px;
-  
-}
-.radar::before{
- background-image: url('../images/icons.svg#radar'); 
- 
-}
-.diagram::before{
-  background-image: url('../images/diagram\ 1.png'); 
- }
- .clok::before {
-   background-image: url('../images/clok.png');
- }
- .astronaut::before {
-  background-image: url('../images/astronaut\ 1.png');
 }
 .features-form:last-child {
   margin-right: 0;
@@ -312,8 +319,6 @@ img {
 }
 .team {
   background-color: var(--button-bgr-color);
-  padding-bottom: 94px;
-  padding-top: 94px;
 }
 .team-tittle {
   font-weight: bold;
@@ -332,6 +337,9 @@ img {
 .team-form {
   margin-right: 30px;
   width: 270px;
+
+  border: 1px solid var(--hero-text-color);
+  border-radius: 4px;
 }
 .team-form:last-child {
   margin-right: 0px;
@@ -340,25 +348,25 @@ img {
   font-weight: normal;
   font-size: 16px;
   line-height: 1.19;
+  margin-top: 10px;
+  color: var(--tittle-text-color);
 }
 .team-member {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+}
 
-}
-.team-occupation {
-  margin-top: 10px;
-  margin-bottom: 16px;
-  color: var(--tittle-text-color);
-}
 .team-container {
-  padding-top: 29.95px;
-  padding-bottom: 29.95px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  width: 270px;
 }
 .social {
   display: inline-flex;
   flex-wrap: wrap;
+  margin-top: 16px;
 }
 .icon-social {
   width: 44px;
@@ -366,13 +374,14 @@ img {
   border: none;
   padding: 12px;
   cursor: pointer;
-  fill: var(--icon-color)
+  fill: var(--icon-color);
 }
 .icon-social:hover {
- fill: var(--hero-text-color);
- 
+  fill: var(--hero-text-color);
 }
 .button-icon {
+  width: 44px;
+  height: 44px;
   margin-right: 10px;
   display: block;
   border-radius: 50%;
@@ -392,7 +401,6 @@ img {
 }
 .button-client {
   display: block;
- 
 }
 
 .client-icon {
@@ -421,20 +429,22 @@ img {
 .client-item:hover {
   border: 1px solid var(--accent-color);
   cursor: pointer;
-  
 }
 .client-list {
   display: flex;
   flex-wrap: wrap;
-
 }
 
 /*Footer*/
-.foot {
+.foot-section {
   background-color: var(--hero-bgr-color);
   padding-top: 60px;
   padding-bottom: 60px;
-  width: 1600px;
+  margin: 0;
+}
+.foot {
+  display: flex;
+  flex-wrap: wrap;
 }
 .logo-foot {
   color: var(--hero-text-color);
@@ -457,7 +467,9 @@ img {
 .addr p {
   margin-bottom: 9px;
 }
-
+.contact-form {
+  margin-left: 32px;
+}
 .addr .mail {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
@@ -488,10 +500,23 @@ img {
   text-transform: uppercase;
 }
 .foot-social {
-  display: block;
-  flex-wrap: nowrap;
-  
+ margin-left: 70px;
 }
+
+.icon-foot {
+fill: var(--hero-text-color);
+
+}
+.button-icon.icon-foot {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.button-icon.icon-foot:hover,
+.button-icon.icon-foot:focus {
+  background-color: var(--accent-color);
+}
+
 
 /*Portfolio style*/
 
@@ -526,20 +551,27 @@ img {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  margin-top: 20px;
+}
+.work-container {
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
 }
 .work-form {
-  text-align: left;
   margin-right: 30px;
   margin-bottom: 30px;
   width: 370px;
 }
+
 .work-form:nth-last-child(3n + 1) {
-  text-align: left;
   margin-right: 0;
 }
 .work-form:nth-last-child(-n + 3) {
-  text-align: left;
   margin-bottom: 0;
 }
 .work-type {
