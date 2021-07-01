@@ -467,6 +467,9 @@ background-color: var(--hero-text-color);
 .addr p {
   margin-bottom: 9px;
 }
+.addr li {
+  margin-bottom: 9px;
+}
 .contact-form {
   margin-left: 32px;
 }
@@ -476,8 +479,7 @@ background-color: var(--hero-text-color);
   letter-spacing: 0.02em;
   text-align: left;
 
-  margin-bottom: 9px;
-  display: block;
+    display: block;
 }
 .addr .tel {
   color: rgba(255, 255, 255, 0.6);
