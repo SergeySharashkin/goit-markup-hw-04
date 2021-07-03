@@ -380,7 +380,7 @@ img {
   padding: 0;
 }
 .team-social:last-child {
-  margin-left: 0px;
+  margin-right: 0px;
 }
 .button-icon {
   width: 44px;
@@ -410,6 +410,7 @@ img {
   font-weight: 700;
   line-height: 1.17;
   margin-bottom: 50px;
+  text-align: center;
 }
 .button-client {
   display: flex;
@@ -454,6 +455,7 @@ img {
 .foot {
   display: flex;
   flex-wrap: wrap;
+  align-items: baseline;
 }
 .logo-foot {
   color: var(--hero-text-color);
