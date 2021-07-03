@@ -58,10 +58,13 @@ img {
 .section {
   padding-bottom: 94px;
   padding-top: 94px;
-  margin: 0;
+  margin: auto;
+  max-width: 1600px;
 }
 .head {
   border-bottom: 1px solid #ececec;
+  margin: auto;
+  max-width: 1600px;
 }
 
 .accent {
@@ -243,6 +246,8 @@ img {
 }
 .padding-section {
   padding-bottom: 0px;
+  margin: auto;
+  max-width: 1600px;
 }
 .features-list {
   display: flex;
@@ -450,7 +455,9 @@ img {
   background-color: var(--hero-bgr-color);
   padding-top: 60px;
   padding-bottom: 60px;
-  margin: 0;
+  margin: auto;
+  max-width: 1600px;
+
 }
 .foot {
   display: flex;
